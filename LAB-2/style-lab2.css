@@ -1,0 +1,62 @@
+.contenu {
+    width: 800px;
+    margin: 0 auto 200px;
+}
+table.au-dessus {
+    border-collapse: collapse;
+    width: 280px;
+    height: 50px;
+    background: azure;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+}
+.au-dessus tr, .au-dessus td {
+    border: 4px black solid;
+}
+table.au-milieu {
+    border-collapse: collapse;
+    border: 4px black solid;
+    width: 300px;
+    height: 30px;
+    background-color: lightgreen;
+    margin: 10px;
+}
+.au-milieu tr, .au-milieu td{
+    border: 4px black solid;
+}
+.espace {
+    width: 280px;
+}
+.grand-espace {
+    width: 250px;
+}
+table.en-bas{
+    border: 4px maroon solid;
+    border-collapse: collapse;
+    width: 800px;
+    height: 900px;
+    background-color: beige;
+}
+.en-bas tr, .en-bas th.special, .en-bas td.special{
+    border: 4px maroon solid;
+    width: 400px;
+    padding: 1px;
+}
+table.sans-border{
+    border: 1px beige;
+    width: 300px;
+}
+span1{
+    color: forestgreen;
+}
+span2{
+    color: red;
+}
+span3{
+    color: dodgerblue;
+}
+.petit-tableau td, th, tr{
+    border-collapse: collapse;
+    border: 1px cadetblue solid;
+}
