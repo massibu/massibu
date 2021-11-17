@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lab-3.css">
+</head>
+<body>
+<h1>Масссибу Давид Леви, НПИбд-0120, 1032204114</h1>
+<div>
+    <form action="">
+        <div>
+            <u><h2>Премьер 5:</h2></u>
+            <label for="text1">Ваше имя: </label>
+            <input class="texte" type="text" id="text1">
+        </div>
+        <div>
+            <label for="rd1">Мужчина</label><input type="radio" name="gender" id="rd1">
+        </div>
+        <div>
+            <label for="rd2">Женщина</label><input type="radio" name="gender" id="rd2">
+        </div>
+        <div>
+            <label for="text2">Детей</label>
+            <input class="texte" type="text" id="text2">
+        </div>
+        <div>
+            <label for="text3">Страна</label>
+            <input class="texte" type="text" id="text3">
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <label for="ukraine">Украина</label>
+                    <input type="checkbox" id="ukraine">
+                </li>
+                <li>
+                    <label for="russia">Россия</label>
+                    <input type="checkbox" id="russia">
+                </li>
+                <li>
+                    <label for="autre">Другая</label>
+                    <textarea name="autre" id="autre" cols="30" rows="10"></textarea>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <label for="email">Электронный адрес: </label>
+            <input class="texte" type="text" id="email">
+        </div>
+        <p>Для подтверждения ввода нажмите на кнопку SUBMIT.</p>
+        <P>Для сброса введенных данных нажмите на кнопку RESET.</P>
+        <input type="button" value="SUBMIT">
+        <input type="button" value="RESET">
+    </form>
+</div>
+<hr>
+<form action="">
+    <div>
+        <u><h2>Премьер 6:</h2></u>
+        <p>Данные о пользователе</p>
+        <div>
+            <label for="firstname">Имя:</label><br><input class="texte" type="text" id="firstname">
+        </div>
+        <div>
+            <label for="lastname">Фамилия:</label><br><input class="texte" type="text" id="lastname">
+        </div>
+        <div>
+            <label for="post name">Отчество:</label><br><input class="texte " type="text" id="post name">
+        </div>
+        <p>Укажите ваш под:</p>
+        <div>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Мужской</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Женский</label>
+        </div>
+        <p>Анкета:</p>
+        <p>Как вы относитесь к тому, чтобы стать химиком:</p>
+        <div>
+            <input type="checkbox" name="chemistry" id="yes">
+            <label for="yes">Положительно, всегда хотел им стать</label>
+        </div>
+        <div>
+            <input type="checkbox" name="chemistry" id="maybe">
+            <label for="maybe">Безразлично, никогда не думал об этом серьезно</label>
+        </div>
+        <div>
+            <input type="checkbox" name="chemistry" id="no">
+            <label for="no">Отрицательно, меня с детсва отталкивают мысли об этом</label>
+        </div>
+    </div>
+</form>
+<hr>
+<div>
+    <h2><u>Функции</u></h2>
+    <button onclick="exercise1 ()">задание 1.</button>
+    <button onclick="exercise2 ()">задание 2.</button>
+    <button onclick="exercise3 ()">задание 3.</button>
+    <button onclick="exercise4 ()">задание 4.</button>
+    <button onclick="exercise5 ()">задание 5.</button>
+    <button onclick="exercise6 ()">задание 6.</button>
+    <button onclick="exercise7 ()">задание 7.</button>
+    <p id="1">Абзац 1</p>
+    <p id="2">Абзац 2</p>
+    <p id="3">Абзац 3</p>
+</div>
+<script>
+    function exercise1() {
+        let verification = confirm("Проверить, какое значение возвращает функция")
+        alert(verification)
+    }
+    function exercise2 () {
+        let name = prompt("Введите фамилию")
+        alert('Привет, ' + name)
+    }
+    function exercise3 () {
+        let name = prompt("Введите ваш имя")
+        let age = prompt("Введите ваш возраст")
+        let humor= prompt("Введите ваше настроение")
+        document.write(
+            "Здравствуй, " + name +
+            " Тебе " + age + " лет" +
+            " И у тебя " + humor + " настроение!" +
+            " Всё верно, не так-ли?!"
+        )
+    }
+    function exercise4 () {
+        let x = prompt("Введите значение x","0")
+        let y = prompt("Введите значение y","0.0")
+        let integerx = parseInt(x)
+        let floaty = parseFloat(y)
+        let result = integerx + floaty
+        document.write(result)
+    }
+    function exercise5 () {
+        let firstName = prompt("Введите имя", "сюда")
+        let lastName = prompt("Введите фамилию")
+        let age = prompt("Введите возраст")
+        alert("В следующем году вам будет, " + age)
+    }
+    function exercise6 () {
+        let id = prompt("Введите номер абзаца между (1-3)", "1")
+        let g = document.getElementById(id)
+        alert(g.innerHTML)
+    }
+    function exercise7 () {
+        let id = prompt("Введите номер абзаца между (1-3)", "1")
+        let text = prompt("Введите текст абзаца", "текст")
+        let g = document.getElementById(id)
+        g.innerHTML = text
+        alert(text)
+    }
+
+</script>
+</body>
+</html>
