@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Масссибу Давид Леви, НПИбд-0120, 1032204114</h1>
+<div>
+    <u><h2>лабораторная работа 4</h2></u>
+    <button onclick="exercise1()">Задание 4</button>
+    <button onclick="exercise2()">Задание 14</button>
+    <button onclick="exercise3()">Задание 24</button>
+</div>
+<script>
+    function exercise1 () {
+        let numMonth = prompt("Введите номер месяца", "1")
+        let Nm = parseInt(numMonth)
+        switch (Nm) {
+            case 12:
+            case 1:
+            case 2: {
+                alert("Зима")
+                break
+            }
+            case 3:
+            case 4:
+            case 5: {
+                alert("Весна")
+                break
+            }
+            case 6:
+            case 7:
+            case 8: {
+                alert("Лето")
+                break
+            }
+            case 9:
+            case 10:
+            case 11: {
+                alert("осень")
+                break
+            }
+        }
+    }
+    function exercise2 () {
+        alert("случайное целое между 1 и 10 = " + Math.floor (1 + Math.random() * (10 + 1 - 1)))
+    }
+    function exercise3 () {
+        for (var x = 0; x < 20; x++) {
+            for (var y = 0; y <= x; y = y + 1) {
+                document.write(" x ");
+            }
+            document.write("<br>");
+        }
+    }
+</script>
+</body>
+</html>
