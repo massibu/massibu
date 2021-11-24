@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="lab6.css">
+</head>
+<body>
+<h1>Масссибу Давид Леви, НПИбд-0120, 1032204114</h1>
+<div>
+  <h2>Лабораторная работа 6</h2>
+  <button onclick="ex1()">Задание 4</button>
+  <button onclick="ex2()">Задание 14</button>
+  <button onclick="ex3()">Задание 24</button>
+  <h3>Консоль:</h3>
+  <div id="exercise">
+
+  </div>
+  <div id="cons" class="console">
+
+  </div>
+  <script>
+    function ex1() {
+
+      exercise = document.getElementById("exercise")
+      function q(quoifaire) {
+        exercise.innerHTML = "<p>" + quoifaire + "</p>"
+      }
+      q("Дана строка 'aa aba abba abbba abca abea'. Написать регулярное выражение, которое найдет строки aba, abba, abbba по шаблону: буква 'a', буква 'b' любое количество раз, буква'a'.")
+
+      cons = document.getElementById('cons')
+      function l(message) {
+        cons.innerHTML = "<p>" + message + "</p>" + cons.innerHTML
+      }
+
+      var str1 = 'aa aba abba abbba abca abea'
+      var reg1 = new RegExp("ab+a", "g")
+      ligne = str1.match(reg1)
+      l("Преобразованная строка : " + ligne)
+      l("Исходная строка : " + str1 )
+    }
+    function ex2() {
+
+      exercise = document.getElementById("exercise")
+      function q(quoifaire) {
+        exercise.innerHTML = "<p>" + quoifaire + "</p>"
+      }
+      q("Дана строка 'aa aba abba abbba abbbba abbbbba'. Написать регулярное выражение, которое найдет строки abba, abbba, abbbba и только их.")
+
+      cons = document.getElementById('cons')
+      function l(message) {
+        cons.innerHTML = "<p>" + message + "</p>" + cons.innerHTML
+      }
+
+      var str1 = 'aa aba abba abbba abbbba abbbbba'
+      var reg1 = new RegExp("ab{2,4}a", "g")
+      ligne = str1.match(reg1)
+      l("Преобразованная строка : " + ligne)
+      l("Исходная строка : " + str1 )
+    }
+    function ex3() {
+
+      exercise = document.getElementById("exercise")
+      function q(quoifaire) {
+        exercise.innerHTML = "<p>" + quoifaire + "</p>"
+      }
+      q("Дана строка 'aba aea aca aza axa a-a a#a'. Написать регулярное выражение, которое найдет строки следующего вида: по краям стоят буквы 'a', а между ними – не 'e' и не 'x'.")
+
+      cons = document.getElementById('cons')
+      function l(message) {
+        cons.innerHTML = "<p>" + message + "</p>" + cons.innerHTML
+      }
+
+      var str1 = 'aba aea aca aza axa a-a a#a'
+      var reg1 = new RegExp("a[bcz#-]a","g")
+      ligne = str1.match(reg1)
+      l("Преобразованная строка : " + ligne)
+      l("Исходная строка : " + str1 )
+    }
+  </script>
+</div>
+</body>
+</html>
